@@ -1,0 +1,104 @@
+/* reset */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+/* 회원가입 form */
+.account_form {
+  box-sizing: border-box;
+  width: 480px;
+  margin: 24px auto;
+  padding: 24px;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.account_title {
+  line-height: 30px;
+  color: #292929;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.account_form > .account_desc {
+  margin-top: 8px;
+  line-height: 20px;
+  color: #737373;
+  font-size: 14px;
+}
+
+.account_form > .account_desc > strong {
+  color: #292929;
+}
+
+form > .account_title {
+  margin-top: 40px;
+}
+
+form > .account_input {
+  margin-top: 24px;
+}
+
+.year_label,
+.school_label {
+  display: block;
+  padding: 0 8px;
+  line-height: 20px;
+  color: #737373;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#year {
+  margin-top: 4px;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  line-height: 24px;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  background-image: url(../../public/register.input.select.png);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 24px 24px;
+}
+
+#year > option {
+  white-space: nowrap;
+  min-height: 1.2em;
+}
+
+#school {
+  margin-top: 4px;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  line-height: 24px;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  background-image: url(../../public/register.input.search.png);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 24px 24px;
+}
+
+.account_input > button {
+  display: block;
+  margin-top: 24px;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #c62917;
+}

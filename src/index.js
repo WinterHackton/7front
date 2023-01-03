@@ -5,10 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 
