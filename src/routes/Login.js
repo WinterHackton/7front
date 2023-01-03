@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import { propTypes } from "react-bootstrap/esm/Image";
 import { useParams } from "react-router-dom";
+<<<<<<< HEAD
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import "./Login.css";
+=======
+>>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab
 import "../App.css";
 
 function Login() {
   return (
+<<<<<<< HEAD
 
     <div className="login_form">
       <h1 className="logo">
@@ -33,9 +37,16 @@ function Login() {
           <a href="/register">회원가입</a>
         </p>
       </form>
+=======
+    <div className="container">
+      <div className="alert alert-warning">2초이내 구입시 할인</div>
+>>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab
     </div>
   );
 }
 
 export default Login;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab

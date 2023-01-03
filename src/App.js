@@ -3,8 +3,11 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import Login from "./routes/Login.js";
+<<<<<<< HEAD
 import Account from "./routes/Account.js";
 
+=======
+>>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 
 function App() {
@@ -13,7 +16,11 @@ function App() {
       <Navbar bg="white" variant="white">
         <Container>
           <Nav className="me-auto" id="main-bar">
+<<<<<<< HEAD
             <Nav.Link className="main_logo" onClick={() => { }}>
+=======
+            <Nav.Link className="main_logo" onClick={() => {}}>
+>>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab
               <img
                 src={process.env.PUBLIC_URL + "main_logo.png"}
                 width="60%"
@@ -24,12 +31,17 @@ function App() {
               <div className="main_school">동의대</div>
             </span>
 
+<<<<<<< HEAD
             <Nav.Link className="link" onClick={() => { }}>
+=======
+            <Nav.Link className="link" onClick={() => {}}>
+>>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab
               게시판
             </Nav.Link>
             <Nav.Link className="link" href="#pricing">
               강의실
             </Nav.Link>
+<<<<<<< HEAD
             <Nav.Link className="link" onClick={() => { }}>
               학점계산기
             </Nav.Link>
@@ -50,6 +62,28 @@ function App() {
               ></img>
             </Nav.Link>
             <Nav.Link onClick={() => { }}>
+=======
+            <Nav.Link className="link" onClick={() => {}}>
+              학점계산기
+            </Nav.Link>
+            <Nav.Link className="link" onClick={() => {}}>
+              친구
+            </Nav.Link>
+            <Nav.Link className="link" onClick={() => {}}>
+              책방
+            </Nav.Link>
+            <Nav.Link className="link" onClick={() => {}}>
+              캠퍼스픽
+            </Nav.Link>
+            <Nav.Link onClick={() => {}}>
+              {" "}
+              <img
+                src={process.env.PUBLIC_URL + "message.png"}
+                width="60%"
+              ></img>
+            </Nav.Link>
+            <Nav.Link onClick={() => {}}>
+>>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab
               {" "}
               <img
                 src={process.env.PUBLIC_URL + "friends.png"}
@@ -59,7 +93,10 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab
       <div className="wrap">
         <div className="divivder"></div>
         <div className="group">
@@ -235,9 +272,12 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
       </Routes>
+<<<<<<< HEAD
       <Routes>
         <Route path="/account" element={<Account />} />
       </Routes>
+=======
+>>>>>>> 3cbdf2e7350be6d443b9511fc9d6adb7d1d32aab
     </div>
   );
 }

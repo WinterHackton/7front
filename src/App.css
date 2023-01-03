@@ -58,11 +58,11 @@ a {
   }
 }
 
-/* .main_logo {
-  position: relative;
+.main_logo {
+  /* position: relative;
   left: -90px;
-  top: -5px;
-} */
+  top: -5px; */
+}
 
 #main-bar {
   font-weight: bold;
@@ -74,7 +74,6 @@ a {
   top: 5px; */
   font-weight: normal;
 }
-
 .everytime {
   font-size: 10px;
   font-weight: 1000;
