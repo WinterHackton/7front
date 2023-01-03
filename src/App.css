@@ -1,3 +1,23 @@
+/* reset css */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+input {
+  color: #666;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+}
+p {
+  margin: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .App {
   text-align: center;
 }
@@ -32,7 +52,46 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.main_msg {
+  position: relative;
+  top: 100px;
+}
+
+.main_logo {
+  position: relative;
+  left: -90px;
+  top: -5px;
+}
+
+#main-bar {
+  font-weight: bold;
+}
+
+.me-auto>span {
+  position: relative;
+  left: -115px;
+  top: 5px;
+  font-weight: normal;
+}
+
+.everytime {
+  font-size: 10px;
+  font-weight: 1000;
+  color: #c62917;
+  margin-bottom: -5px;
+  display: block;
+}
+
+.main_school {
+  font-size: large;
+}
+
+.link {
+  color: #444444;
 }
