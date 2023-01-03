@@ -1,3 +1,23 @@
+/* reset css */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+input {
+  color: #666;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+}
+p {
+  margin: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .App {
   text-align: center;
 }
@@ -32,7 +52,92 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* .main_logo {
+  position: relative;
+  left: -90px;
+  top: -5px;
+} */
+
+#main-bar {
+  font-weight: bold;
+}
+
+.me-auto > span {
+  /* position: relative;
+  left: -115px;
+  top: 5px; */
+  font-weight: normal;
+}
+
+.everytime {
+  font-size: 10px;
+  font-weight: 1000;
+  color: #c62917;
+  margin-bottom: -5px;
+  display: block;
+}
+
+.main_school {
+  font-size: large;
+}
+.link {
+  color: #444444;
+}
+.wrap {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #d6d6d6;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  justify-content: space-around;
+}
+div > .divider {
+  display: inline-block;
+  width: 1px;
+  height: 200px;
+  background-color: #e3e3e3;
+}
+div.group {
+  margin-right: 10px;
+  width: 120px;
+}
+div.wrap > div.group {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  text-align: left;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+div.wrap {
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+div.wrap > div.group > ul > li > a {
+  display: block;
+  line-height: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.wrap ul > li > a {
+  color: #444444;
+  font-size: 11px;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+li {
+  list-style: none;
 }
