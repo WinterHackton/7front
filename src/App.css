@@ -52,18 +52,15 @@ a {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
-
 .main_logo {
   /* position: relative;
   left: -90px;
   top: -5px; */
 }
-
 #main-bar {
   font-weight: bold;
 }
@@ -81,7 +78,6 @@ a {
   margin-bottom: -5px;
   display: block;
 }
-
 .main_school {
   font-size: large;
 }
@@ -140,3 +136,324 @@ a {
 li {
   list-style: none;
 }
+.bottom {
+  text-align: center;
+}
+.links li {
+  display: inline-block;
+}
+body,
+div,
+nav,
+ol,
+ul,
+li {
+  color: #666;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+}
+.links > li > a {
+  display: inline-block;
+  margin: 0 4px 4px 4px;
+  line-height: 20px;
+  color: #737373;
+  font-size: 12px;
+}
+#friends_bd {
+  background-color: #f8f8f8;
+}
+#container.friend {
+  padding: 25px 0;
+  width: 780px;
+  background-color: #f8f8f8;
+}
+#container {
+  margin: 80px auto 0 auto;
+  width: 1180px;
+  box-sizing: border-box;
+}
+#container > input {
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  line-height: 20px;
+  box-sizing: border-box;
+  border: 2px solid #d6d6d6;
+  color: #292929;
+  font-size: 14px;
+}
+#container > div.friendlist {
+  border-width: 0 1px 1px 1px;
+}
+#container > div.friendrequestlist,
+#container > div.friendlist {
+  margin-top: 5px;
+  border: 1px solid #e3e3e3;
+  background-color: #fff;
+}
+#container div.friendrequestlist {
+  display: none;
+}
+#container > div.friendrequestlist,
+#container > div.friendlist {
+  border-width: 0 1px 1px 1px;
+}
+a.friend,
+#container > div.friendlist > a.friend {
+  display: block;
+  border-top: 1px solid #e3e3e3;
+}
+
+#friends_d {
+  background-color: #f8f8f8;
+}
+
+#container > div.friendlist > a.friend > h3 {
+  padding: 0 15px;
+  height: 50px;
+  line-height: 50px;
+  color: #292929;
+  font-size: 15px;
+  font-weight: normal;
+}
+#container.timetable {
+  position: relative;
+  padding: 15px;
+  width: 100%;
+  overflow: auto;
+  height: 529px;
+  text-align: left;
+}
+
+aside > div.title {
+  height: 120px;
+  margin-bottom: 5px;
+  padding: 25px;
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+}
+aside {
+  float: left;
+  width: 325px;
+}
+aside > div.title > h1 {
+  color: #262626;
+  font-size: 18px;
+  font-weight: bold;
+}
+aside > div.title > ol.buttons {
+  margin-top: 15px;
+}
+aside > div.title > ol.buttons.threecols > li {
+  float: left;
+  margin: 0 1px;
+  width: 89px;
+}
+aside > div.title > ol.buttons > li > a.light {
+  border: 1px solid #e3e3e3;
+  color: #737373;
+  background-color: transparent;
+}
+aside > div.title > ol.buttons > li > a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #c62917;
+}
+aside > div.menu {
+  border: 1px solid #d6d6d6;
+  background-color: #fff;
+}
+aside > div.menu > ol > li.active > a {
+  color: #c62917;
+  font-weight: bold;
+  background-color: #f8f8f8;
+}
+aside > div.menu > ol > li > a {
+  display: block;
+  padding: 0 25px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  color: #737373;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.title > ol,
+.menu > ol {
+  padding-left: 0rem;
+}
+#container > div.wrap1 {
+  float: right;
+}
+#container div.tablehead {
+  position: fixed;
+  z-index: 90;
+  margin-top: -15px;
+  padding-top: 15px;
+  width: inherit;
+  background-color: #f8f8f8;
+}
+#container table.tablehead {
+  background-color: #f2f2f2;
+}
+
+#container table.tablehead tr {
+  height: 40px;
+}
+#container table.tablehead,
+#container table.tablebody {
+  border-collapse: collapse;
+}
+#container table.tablehead tr th,
+#container table.tablebody tr th,
+#container table.tablebody tr th div {
+  width: 60px;
+}
+#container table.tablehead tr th,
+#container table.tablehead tr td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d6d6d6;
+  color: #a6a6a6;
+  font-weight: normal;
+  text-align: center;
+}
+#container table.tablehead tr td {
+  font-size: 13px;
+}
+#container table.tablehead tr th,
+#container table.tablehead tr td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d6d6d6;
+  color: #a6a6a6;
+  font-weight: normal;
+  text-align: center;
+}
+#container table.tablebody {
+  background-color: transparent;
+  margin-top: -452px;
+}
+#container table.tablehead,
+#container table.tablebody {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#container div.tablebody {
+  margin-top: 39px;
+  width: inherit;
+}
+
+#container table.tablehead tr th,
+#container table.tablebody tr th,
+#container table.tablebody tr th div {
+  width: 60px;
+}
+#container table.tablebody tr th,
+#container table.tablebody tr td {
+  border: 1px solid #d6d6d6;
+  vertical-align: top;
+}
+#container table.tablebody tr th div.times div.time,
+#container table.tablebody tr td div.grids div.grid {
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+}
+#container table.tablebody tr td div.grids div.grid {
+  box-sizing: border-box;
+  border-top: 1px solid #e3e3e3;
+}
+#container table.tablebody tr th div.hours div.hour,
+#container table.tablebody tr th div.times div.time {
+  box-sizing: border-box;
+  border-top: 1px solid #d6d6d6;
+  color: #a6a6a6;
+  font-weight: normal;
+  text-align: center;
+}
+#container table.tablehead tr th,
+#container table.tablebody tr th,
+#container table.tablebody tr th div {
+  width: 60px;
+}
+#container table.tablebody tr td div.cols {
+  position: absolute;
+  z-index: 11;
+}
+#container table.tablebody tr td div.cols div.subject {
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #d6d6d6;
+  border-width: 1px 0;
+}
+
+.color3 {
+  background-color: #eff9cc;
+}
+#container table.tablebody tr td ul.status {
+  margin: 7px 7px 0 0;
+}
+#container table.tablebody tr td ul.status {
+  display: none;
+  float: right;
+}
+#container table.tablebody tr td div.cols div.subject h3 {
+  color: #292929;
+  font-weight: bold;
+}
+#container table.tablebody tr td h3 {
+  margin: 7px 7px 0 7px;
+  font-size: 12px;
+  line-height: 13px;
+}
+#container table.tablebody tr td p {
+  margin: 0 7px 7px 7px;
+  line-height: 12px;
+}
+#container table.tablebody tr td div.cols div.subject p em {
+  margin-right: 5px;
+  color: #737373;
+  font-weight: bold;
+}
+#container table.tablebody tr td p em {
+  font-size: 11px;
+}
+#container table.tablebody tr td div.cols div.subject p span {
+  color: #737373;
+}
+#container table.tablebody tr td p span {
+  font-size: 11px;
+}
+.color5 {
+  background-color: #dee8f6;
+}
+.color1 {
+  background-color: #f2e8e8;
+}
+.color4 {
+  background-color: #dcf2e9;
+}
+.color2 {
+  background-color: #ffe9e9;
+}
+.color6 {
+  background-color: #fff8cc;
+}
+div.friendlist > a.friend > h3 {
+  text-align: left;
+}
+
+

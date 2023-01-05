@@ -1,0 +1,140 @@
+.container {
+  position: relative;
+}
+
+.right_aside {
+  position: absolute;
+  right: 40px;
+  top: 0;
+}
+
+.post_list_title {
+  margin-top: 25px;
+  width: 780px;
+  margin-bottom: -20px;
+  padding: 15px;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.post_list_title a {
+  font-size: 22px;
+  color: #292929;
+  font-weight: bold;
+}
+
+.post_articles {
+  margin-top: 25px;
+  width: 780px;
+}
+#writeArticleButton {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  height: 50px;
+  line-height: 46px;
+  border: 2px solid #d6d6d6;
+  box-sizing: border-box;
+  cursor: text;
+  color: #a6a6a6;
+  font-size: 14px;
+  background: #f9f9f9 url(../../public/container.write.background.png) no-repeat
+    right center;
+  background-size: 40px 40px;
+}
+
+.post_articles > article {
+  margin: 0;
+  padding: 0;
+  margin-bottom: -1px;
+  box-sizing: border-box;
+  border: 1px solid #e3e3e3;
+  background-color: #fff;
+}
+
+.post_articles > article > .article {
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  color: #666;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.post_articles > article > .article > h2.medium {
+  margin-bottom: 5px;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: normal;
+  color: #292929;
+}
+
+.post_articles > article > .article > p.smaill {
+  margin-bottom: 5px;
+  max-height: 30px;
+  line-height: 15px;
+  white-space: normal;
+  overflow: hidden;
+  color: #a6a6a6;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.post_articles > article > .article > time.small {
+  float: left;
+  margin-right: 5px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 11px;
+}
+
+.post_articles > article > .article > h3.small {
+  float: left;
+  max-width: 90px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 0;
+  color: #292929;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post_articles > article > .article > ul.status {
+  float: right;
+  margin: 0;
+}
+
+.post_articles > article > .article > ul > li {
+  float: left;
+  margin-left: 8px;
+  padding: 0 2px;
+  height: 20px;
+  line-height: 20px;
+  color: #a6a6a6;
+  font-size: 12px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 11px 11px;
+  cursor: pointer;
+}
+
+.post_articles > article > .article > ul > li.vote {
+  padding-left: 15px;
+  color: #c62917;
+  background-image: url(../../public/container.articles.vote.png);
+}
+
+.post_articles > article > .article > ul > li.comment {
+  padding-left: 15px;
+  color: #0ca5af;
+  background-image: url(../../public/container.articles.comment.png);
+}
+
+
