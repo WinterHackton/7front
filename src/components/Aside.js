@@ -1,10 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import "./Aside.css";
 
 const RightAside = props => {
   return (
-    <aside className="right_aside">
+    <aside className="right_aside post_right_aside">
       <form action="">
         <input className="right_aside_search" type="text" placeholder="전체 게시판의 글을 검색하세요!" />
       </form>

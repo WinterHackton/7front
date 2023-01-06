@@ -72,62 +72,27 @@ a {
   font-weight: normal;
 }
 .everytime {
-  font-size: 10px;
-  font-weight: 1000;
-  color: #c62917;
-  margin-bottom: -5px;
   display: block;
+  color: #c62917;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 3px;
+  line-height: 15px;
+  font-size: 12px;
 }
 .main_school {
-  font-size: large;
+  display: block;
+  line-height: 25px;
+  color: #292929;
+  font-size: 22px;
 }
 .link {
   color: #444444;
 }
-.wrap {
-  background-color: #f2f2f2;
-  border-bottom: 1px solid #d6d6d6;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
 
-  justify-content: space-around;
-}
-div > .divider {
-  display: inline-block;
-  width: 1px;
-  height: 200px;
-  background-color: #e3e3e3;
-}
-div.group {
-  margin-right: 10px;
-  width: 120px;
-}
-div.wrap > div.group {
-  display: inline-block;
-  vertical-align: top;
-  box-sizing: border-box;
-  text-align: left;
-}
 * {
   margin: 0;
   padding: 0;
-}
-div.wrap {
-  box-sizing: border-box;
-  white-space: nowrap;
-}
-div.wrap > div.group > ul > li > a {
-  display: block;
-  line-height: 25px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-div.wrap ul > li > a {
-  color: #444444;
-  font-size: 11px;
 }
 a {
   text-decoration: none;
@@ -142,6 +107,7 @@ li {
 .links li {
   display: inline-block;
 }
+
 body,
 div,
 nav,
@@ -456,4 +422,132 @@ div.friendlist > a.friend > h3 {
   text-align: left;
 }
 
+/* NavBar */
+.top {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #d6d6d6;
+  background-color: #fff;
+}
+.top-navbar {
+  margin: 0 auto;
+  width: 1180px;
+  height: 100%;
+}
+.nav-logo {
+  float: left;
+  display: block;
+  margin: 20px 16px 20px 0;
+  width: 40px;
+  height: 40px;
+}
+.nav-logo > img {
+  width: 100%;
+  height: 100%;
+}
+#nav-menu {
+  margin: 0 auto;
+  width: 600px;
+  height: 100%;
+  font-size: 0;
+  text-align: center;
+}
 
+#nav-menu > li {
+  display: inline-block;
+  margin: 0 12px;
+  height: 76px;
+  line-height: 76px;
+  font-size: 16px;
+}
+
+#nav-menu > li > a {
+  color: #444444;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#nav-account {
+  float: right;
+  margin-right: 24px;
+  height: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+#nav-account > a {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #d6d6d6;
+  border-radius: 12px;
+  vertical-align: top;
+  width: 40px;
+  color: transparent;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#nav-account > .nav-message {
+  background-image: url(../public/icn_m_chat_gray800_light.png);
+  background-size: 24px 24px;
+}
+
+#nav-account > .nav-mypage {
+  background-image: url(../public/icn_m_account_gray800_light.png);
+  background-size: 24px 24px;
+}
+
+/* Submenu */
+#submenu {
+  margin-top: 80px;
+  border-bottom: 1px solid #d6d6d6;
+  background-color: #f2f2f2;
+}
+#submenu .submenu-wrap {
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+}
+div > .divider {
+  display: inline-block;
+  width: 1px;
+  height: 200px;
+  background-color: #e3e3e3;
+  margin-right: 15px;
+}
+
+div.submenu-wrap div.group {
+  margin-right: 15px;
+  width: 130px;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+div.submenu-wrap div.group ul {
+  list-style: none;
+  padding: 0;
+}
+
+div.submenu-wrap div.group ul li a {
+  display: block;
+  line-height: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

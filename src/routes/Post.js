@@ -9,7 +9,7 @@ function Post() {
     <div>
       <Top></Top>
       <Wrap></Wrap>
-      <div className="container">
+      <div className="container post_container">
         <PostList></PostList>
         <RightAside></RightAside>
       </div>
