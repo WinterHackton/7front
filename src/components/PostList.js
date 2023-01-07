@@ -3,12 +3,12 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./PostList.css";
 
-const PostList = () => {
+function PostList() {
   let [글제, 글제목작성] = useState("");
   let [글내, 글내용작성] = useState("");
 
-  let [글제목, 글제목변경] = useState(["방학되면"]);
-  let [글내용, 글내용변경] = useState(["다들 뭐할거야?"]);
+  let [글제목, 글제목변경] = useState([]);
+  let [글내용, 글내용변경] = useState([]);
 
   let [write, setWrite] = useState(false);
   let [new_w, setNew] = useState(true);
@@ -42,6 +42,18 @@ const PostList = () => {
                     5
                   </li>
                 </ul>
+                <button
+                  onClick={() => {
+                    let copy = [...글제목];
+                    copy.splice(i, 1);
+                    글제목변경(copy);
+                    let copy1 = [...글내용];
+                    copy1.splice(i, 1);
+                    글제목변경(copy1);
+                  }}
+                >
+                  삭제
+                </button>
               </Link>
             </article>
           );
@@ -51,7 +63,6 @@ const PostList = () => {
       <input
         onChange={(e) => {
           글제목작성(e.target.value);
-          console.log(글제);
         }}
       />
       <input
@@ -71,11 +82,13 @@ const PostList = () => {
 
           axios
             .post("/api/v1/post", {
-              title: 글제목,
-              content: 글내용,
+              title: 글제,
+              content: 글내,
+              category: "자유게시판",
+              anonymous: true,
             })
             .then((result) => {
-              console.log(result.data);
+              console.log(result);
             })
             .catch(() => {
               console.log("실패 ㅅㄱ");
@@ -86,7 +99,7 @@ const PostList = () => {
       </button>
     </div>
   );
-};
+}
 function WriteArticle(props) {
   return (
     <div className="wa">
@@ -154,7 +167,7 @@ function WriteArticle(props) {
             <li title="익명" className="anonym"></li>
             <li title="질문" className="question"></li>
           </ul>
-          <butoon
+          <button
             onClick={() => {
               let copy = [...props.글제목];
               copy.unshift(props.글제);
