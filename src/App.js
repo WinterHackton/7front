@@ -12,7 +12,7 @@ import Friends_detail from "./routes/friend-detail.js";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import Register from './routes/Register.js';
-
+import { useCookies } from "react-cookie"
 
 function App() {
   return (
@@ -33,6 +33,22 @@ function App() {
 }
 
 function Top(props) {
+  const [cookies, setCookie, removeCookie] = useCookies(['login']);
+  
+  const [is_login, setIsLogin] = React.useState(false);
+  useEffect(() => {
+    // 쿠키를 가져오기
+    const cookie = cookies.login;
+    // 확인
+    console.log(cookie);
+    // 쿠키가 있으면?
+    if (cookie) {
+      setIsLogin(true);
+    } else {
+      setIsLogin(false);
+    }
+  });
+  if (is_login) {
     return (
       <div className="top">
         <Nav bg="white" variant="white" className="top-navbar">
@@ -71,64 +87,66 @@ function Top(props) {
             </li>
           </ul>
           <div id="nav-account">
-            <Link to="/login">
-              로그인
+            <Link to="/" className="nav-message">
             </Link>
 
-            <Link to="/account">
-              회원가입
+            <Link to="/" className="nav-mypage">
             </Link>
+
           </div>
         </Nav>
       </div>
     );
-  // return (
-  //   <div className="top">
-  //     <Nav bg="white" variant="white" className="top-navbar">
-  //       <Link to="/" className="nav-logo">
-  //         <img
-  //           src={process.env.PUBLIC_URL + "nav.logo.png"}
-  //           width="60%"
-  //         ></img>
-  //       </Link>
-  //       <span className="main_msg">
-  //         <div className="everytime">에브리타임</div>
-  //         <div className="main_school">동의대</div>
-  //       </span>
+  }
+  return (
+    <div className="top">
+      <Nav bg="white" variant="white" className="top-navbar">
+        <Link to="/" className="nav-logo">
+          <img
+            src={process.env.PUBLIC_URL + "nav.logo.png"}
+            width="60%"
+          ></img>
+        </Link>
+        <span className="main_msg">
+          <div className="everytime">에브리타임</div>
+          <div className="main_school">동의대</div>
+        </span>
 
-  //       <ul id="nav-menu">
-  //         <li>
-  //           <Link to="/">게시판</Link>
-  //         </li>
-  //         <li>
-  //           <Link to="/">시간표</Link>
-  //         </li>
-  //         <li>
-  //           <Link to="/">강의실</Link>
-  //         </li>
-  //         <li>
-  //           <Link to="/">학점계산기</Link>
-  //         </li>
-  //         <li>
-  //           <Link to="/friends">친구</Link>
-  //         </li>
-  //         <li>
-  //           <Link to="/">책방</Link>
-  //         </li>
-  //         <li>
-  //           <Link to="/">캠퍼스픽</Link>
-  //         </li>
-  //       </ul>
-  //       <div id="nav-account">
-  //         <Link to="/" className="nav-message">
-  //         </Link>
+        <ul id="nav-menu">
+          <li>
+            <Link to="/">게시판</Link>
+          </li>
+          <li>
+            <Link to="/">시간표</Link>
+          </li>
+          <li>
+            <Link to="/">강의실</Link>
+          </li>
+          <li>
+            <Link to="/">학점계산기</Link>
+          </li>
+          <li>
+            <Link to="/friends">친구</Link>
+          </li>
+          <li>
+            <Link to="/">책방</Link>
+          </li>
+          <li>
+            <Link to="/">캠퍼스픽</Link>
+          </li>
+        </ul>
+        <div id="nav-account">
+          <Link to="/login">
+            로그인
+          </Link>
 
-  //         <Link to="/" className="nav-mypage">
-  //         </Link>
-  //       </div>
-  //     </Nav>
-  //   </div>
-  // )
+          <Link to="/account">
+            회원가입
+          </Link>
+        </div>
+      </Nav>
+    </div>
+  )
 
 }
 function Bottom() {

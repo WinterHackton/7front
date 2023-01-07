@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./PostList.css";
+import { useCookies } from "react-cookie"
 
-const PostList = () => {
+const PostList = (props) => {
   let [글제, 글제목작성] = useState("");
   let [글내, 글내용작성] = useState("");
 
@@ -12,6 +13,9 @@ const PostList = () => {
 
   let [write, setWrite] = useState(false);
   let [new_w, setNew] = useState(true);
+  const [cookies] = useCookies(['login']);
+
+  const cookie = cookies.login;
 
   return (
     <div>
@@ -61,18 +65,17 @@ const PostList = () => {
       />
       <button
         onClick={() => {
-          let copy = [...글제목];
-          copy.unshift(글제);
-          글제목변경(copy);
-
-          let copy1 = [...글내용];
-          copy1.unshift(글내);
-          글내용변경(copy1);
-
           axios
             .post("/api/v1/post", {
-              title: 글제목,
-              content: 글내용,
+              title: 글제,
+              content: 글내,
+              category: "자유게시판",
+              anonymous: true,
+            },
+              {
+              headers: {
+                accessToken: cookie,
+              },
             })
             .then((result) => {
               console.log(result.data);

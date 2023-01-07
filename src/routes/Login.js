@@ -6,11 +6,12 @@ import { Bottom } from "../App.js";
 import './Login.css'
 
 
-const Login = () => {
-  const [cookies, setCookie] = useCookies(["login"]);
+const Login = (props) => {
+  const [cookies,setCookie] = useCookies(["login"]);
   const navigate = useNavigate();
   let [id, idChange] = useState('');
   let [pw, pwChange] = useState('');
+
 
   return (
 
@@ -66,8 +67,8 @@ const Login = () => {
             .then((res) => {
               console.log(res.data)
               console.log(res.data.accessToken)
-              const jwt = setCookie("login", res.data.accessToken)
-              navigate('/')
+              setCookie("login", res.data.accessToken, { path: '/' });
+              navigate('/home')
             })
             .catch((err) => {
               console.log(err)
