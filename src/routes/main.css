@@ -1,0 +1,361 @@
+#asdie_main {
+  width: 300px;
+}
+#asdie_main {
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  border-left: 1px solid #d6d6d6;
+  font-family: "맑은 고딕", "돋움", "Apple SD Gothic Neo", sans-serif;
+  background-color: #fff;
+}
+aside::-webkit-scrollbar {
+  display: none;
+}
+div.login {
+  padding: 40px 15px;
+  width: 300px;
+  height: 270px;
+}
+div.login {
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d6d6d6;
+  background-color: #fff;
+}
+div.login > a.logo {
+  margin-bottom: 40px;
+  display: block;
+  text-align: center;
+}
+div.login > a.logo > img {
+  height: 30px;
+}
+img {
+  vertical-align: middle;
+}
+div.login > a.button.login {
+  border: 1px solid #e3e3e3;
+  color: #737373;
+}
+div.login > a.button {
+  display: block;
+  margin-bottom: 5px;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+div.login > a.button.register {
+  color: #fff;
+  background-color: #c62917;
+  padding-top: 0px;
+}
+div.login > p.find {
+  float: right;
+  text-align: right;
+}
+div.login > p {
+  padding: 5px 5px 0 5px;
+  width: 50%;
+  box-sizing: border-box;
+}
+form.search {
+  top: 270px;
+  width: 300px;
+}
+
+form.search {
+  position: fixed;
+  z-index: 11;
+  padding: 5px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e3e3e3;
+  background-color: #fff;
+}
+form.search > p {
+  padding: 10px;
+  line-height: 20px;
+  color: #292929;
+  font-size: 14px;
+  font-weight: bold;
+}
+form.search > input {
+  padding: 0 35px 0 10px;
+  width: 100%;
+  height: 40px;
+  line-height: 20px;
+  box-sizing: border-box;
+  border: 1px solid #e3e3e3;
+  color: #444444;
+  font-size: 14px;
+  background: #f2f2f2 url("/public/aside.search.background.png") no-repeat right
+    10px center;
+  background-size: 30px 30px;
+}
+div.campuslist {
+  top: 361px;
+}
+div.campuslist {
+  position: relative;
+  z-index: 10;
+}
+div.campuslist > a {
+  display: block;
+  padding: 0 15px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e3e3e3;
+}
+div.campuslist > a > span.name {
+  color: #444444;
+  font-size: 14px;
+}
+div.campuslist > a > span.count {
+  float: right;
+  color: #a6a6a6;
+  font-size: 12px;
+}
+.init {
+  padding-right: 301px;
+}
+.init {
+  width: 100%;
+  box-sizing: border-box;
+  word-break: break-all;
+  font-family: NanumSquare;
+  text-align: center;
+}
+div.stores {
+  position: absolute;
+  top: 371px;
+  left: 354px;
+}
+
+#asdie_main,
+.init {
+  display: block;
+}
+div.wrap3 {
+  width: 674px;
+  height: 622px;
+}
+.init > div.wrap3 {
+  position: relative;
+  margin: 0 auto;
+}
+.init > div.wrap3 > h1 {
+  position: absolute;
+  text-align: left;
+}
+.init > div.wrap3 > h1 {
+  top: 271px;
+  left: 354px;
+  width: 320px;
+}
+h1,
+h2 {
+  line-height: 30px;
+  font-size: 24px;
+}
+h1,
+h2 {
+  color: #292929;
+}
+div.wrap > div.device {
+  position: absolute;
+}
+div.wrap > div.device {
+  top: 80px;
+  left: 0;
+}
+div.wrap > div.device {
+  box-sizing: border-box;
+}
+div.wrap > div.device > div.screen {
+  width: 270px;
+  height: 540px;
+}
+div.wrap > div.device > div.screen {
+  position: relative;
+  z-index: 1;
+  border: 2px solid #d6d6d6;
+  border-bottom: 0;
+  border-radius: 18px 18px 0 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+div.wrap > div.device > div.screen > div.home {
+  top: 0;
+  width: 270px;
+  height: 540px;
+  background-position: 0px 0px;
+}
+
+div.wrap > div.device > div.screen > div.home {
+  opacity: 1;
+}
+div.wrap > div.device > div.screen > div.image {
+  position: absolute;
+}
+div.wrap > div.device > div.screen > div.timetable {
+  top: 0;
+  width: 270px;
+  height: 540px;
+  background-position: -285px 0px;
+}
+div.wrap > div.device > div.screen > div.timetable {
+  opacity: 0;
+  animation: active-init-timetable 6s infinite;
+}
+div.wrap > div.device > div.screen > div.board {
+  top: 0;
+  width: 270px;
+  height: 540px;
+  background-position: -570px 0px;
+}
+div.wrap > div.device > div.screen > div.board {
+  opacity: 0;
+  animation: active-init-board 6s infinite;
+}
+#main {
+  background-color: #f5f5f5;
+}
+#image_home {
+  text-align: left;
+}
+section.white {
+  background-color: #fff;
+}
+section {
+  padding-right: 301px;
+}
+section h2 {
+  padding: 80px 0 30px 0;
+}
+section h1,
+section h2 {
+  line-height: 30px;
+  font-size: 24px;
+}
+section h1,
+section h2 {
+  color: #292929;
+}
+section h1 > strong,
+section h2 > strong {
+  color: #c62917;
+  font-family: NanumSquareEB;
+}
+section {
+  width: 100%;
+  box-sizing: border-box;
+  word-break: break-all;
+  font-family: NanumSquare;
+  text-align: center;
+}
+div.paragraph {
+  padding-bottom: 60px;
+}
+section div.paragraph {
+  padding-bottom: 60px;
+}
+.paragraph > p {
+  line-height: 25px;
+  font-size: 16px;
+}
+div.paragraph > p {
+  color: #444444;
+}
+div.figures {
+  padding-bottom: 80px;
+}
+div.figures > div {
+  margin: 0 36px;
+}
+div.figures > div {
+  display: inline-block;
+}
+div.figures > div > p.number > strong:first-child {
+  margin-left: 0;
+}
+div.figures > div > p.number > strong {
+  font-size: 32px;
+}
+div.figures > div > p.number > strong {
+  display: inline-block;
+  margin-left: 8px;
+  letter-spacing: -2px;
+}
+div.figures > div > p.number > span {
+  font-size: 16px;
+}
+div.figures > div > p.number > span {
+  display: inline-block;
+  margin-left: 4px;
+}
+div.figures > div > p.description {
+  margin-top: 10px;
+  font-size: 14px;
+}
+div.figures > div > p.description {
+  color: #444444;
+}
+div.figures > hr {
+  display: inline-block;
+  border-right: 2px solid #d6d6d6;
+}
+div.figures > hr {
+  margin: 0 -12px 20px -12px;
+  height: 20px;
+}
+div.figures > div > p.number > strong {
+  display: inline-block;
+  margin-left: 8px;
+  letter-spacing: -2px;
+}
+div.figures > div > p.number > span {
+  font-size: 16px;
+}
+div.figures > div > p.number > span {
+  display: inline-block;
+  margin-left: 4px;
+}
+div.figures > div > p.description {
+  margin-top: 10px;
+  font-size: 14px;
+}
+section div.figures > div > p.icon {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+}
+section div.figures > div > p.icon {
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: #fff;
+}
+section div.figures > div > p.icon > img {
+  height: 32px;
+}
+img {
+  vertical-align: middle;
+}
+#main_footer > .bottom > ul {
+  padding-left: -10px;
+  background-color: white;
+  margin-bottom: 0rem;
+}
+.links {
+  margin-bottom: 0rem;
+}

@@ -6,6 +6,7 @@ import Login from "./routes/Login.js";
 import Account from "./routes/Account.js";
 import Post from "./routes/Post.js";
 import Home from "./Home.js";
+import Main from "./routes/main.js";
 import Friends from "./routes/friends.js";
 import Friends_detail from "./routes/friend-detail.js";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
@@ -17,7 +18,8 @@ function App() {
   return (
 
     <Routes>
-      <Route path="/" element={<Home />} exact={true} />
+      <Route path="/" element={<Main />} exact={true} />
+      <Route path="/home" element={<Home />} exact={true} />
       <Route path="/login" element={<Login />} />
       <Route path="/account" element={<Account />} />
       <Route path="/account/register" element={<Register />} />
@@ -337,5 +339,5 @@ function Wrap() {
     </div>
   );
 }
-
 export { App as default, Top, Wrap, Bottom };
+

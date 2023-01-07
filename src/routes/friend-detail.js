@@ -11,7 +11,7 @@ function Friends_detail() {
       <Top></Top>
       <div id="friends_d">
         <div id="container" className="timetable">
-          <aside>
+          <aside id="aside_friend">
             <div className="title">
               <h1>김도연</h1>
               <ol className="buttons threecols">
@@ -382,4 +382,6 @@ function Friends_detail() {
     </div>
   );
 }
+
 export default Friends_detail;
+

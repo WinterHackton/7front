@@ -58,7 +58,6 @@ const Home = () => {
             </div>
           </div>
         </aside>
-        
         <article className="center_desc">
           <img
             src={process.env.PUBLIC_URL + "20230103_tripstore_main_A_home.png"}
