@@ -3,7 +3,6 @@ import { json, Link, useNavigate } from 'react-router-dom';
 import { useCookies } from "react-cookie"
 import axios from 'axios';
 import { Bottom } from "../App.js";
-import { setCookie } from "./Cookie";
 import './Login.css'
 
 
@@ -26,14 +25,14 @@ const Login = () => {
           }}></input>
         </p>
         <p className="input">
-          <input placeholder="비밀번호" type="password"  autoComplete="new-password"
-            name="password" onChange={(e)=>{
+          <input placeholder="비밀번호" type="password" autoComplete="new-password"
+            name="password" onChange={(e) => {
               pwChange(e.target.value)
             }}></input>
         </p>
       </form>
-        <p className="submit">
-          {/* <button className="loginBtn" onClick={() => {
+      <p className="submit">
+        {/* <button className="loginBtn" onClick={() => {
             fetch('http://every-time-clone.shop/api/v1/member/login', {
               method: "POST",
               headers: {
@@ -66,18 +65,20 @@ const Login = () => {
           })
             .then((res) => {
               console.log(res.data)
-              setCookie("id", res.data.accessToken)
+              console.log(res.data.accessToken)
+              const jwt = setCookie("login", res.data.accessToken)
+              navigate('/')
             })
             .catch((err) => {
               console.log(err)
             })
         }}>로그인</button>
-        </p>
-        <label className="autologin">
-          <input type="checkbox" name="autologin" value="1"></input>
-          로그인 유지
-        </label>
-      
+      </p>
+      <label className="autologin">
+        <input type="checkbox" name="autologin" value="1"></input>
+        로그인 유지
+      </label>
+
       <footer>
         <p className="find"><Link to="/forgot">아이디/비밀번호 찾기</Link></p>
         <p className="register">
@@ -85,7 +86,6 @@ const Login = () => {
           <Link to="/account">회원가입</Link>
         </p>
       </footer>
-      <Bottom></Bottom>
     </div>
   );
 };
