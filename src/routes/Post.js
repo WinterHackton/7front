@@ -4,6 +4,7 @@ import { PostList, WriteArticle } from "../components/PostList";
 import RightAside from "../components/Aside";
 import "../components/PostList.css";
 
+
 function Post() {
   return (
     <div>
@@ -11,7 +12,7 @@ function Post() {
       <Wrap></Wrap>
       <div className="container">
         <PostList></PostList>
-        {/* <RightAside></RightAside> */}
+        <RightAside></RightAside>
       </div>
       <Bottom></Bottom>
     </div>
@@ -19,3 +20,4 @@ function Post() {
 }
 
 export default Post;
+

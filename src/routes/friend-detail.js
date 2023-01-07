@@ -382,4 +382,6 @@ function Friends_detail() {
     </div>
   );
 }
+
 export default Friends_detail;
+
