@@ -34,9 +34,7 @@ function PostList(props) {
         let copy = result.data;
         setArticle(copy);
       })
-      .catch(() => {
-        console.log("실패");
-      });
+      .catch(() => {});
   });
   return (
     <div>
@@ -78,6 +76,27 @@ function PostList(props) {
                     5
                   </li>
                 </ul>
+                <button
+                  onClick={() => {
+                    axios
+                      .delete("/api/v1/post", {
+                        data: { id: article[i].id },
+                        headers: {
+                          AccessToken: cookie,
+                        },
+                      })
+                      .then((res) => {
+                        let copy = [...article];
+                        copy.splice(i, 1);
+                        setArticle(copy);
+                      })
+                      .catch((error) => {
+                        console.log(error);
+                      });
+                  }}
+                >
+                  삭제
+                </button>
                 {/* <button
                   onClick={() => {
                     let copy = [...글제목];
@@ -91,30 +110,6 @@ function PostList(props) {
                   삭제
                 </button> */}
               </Link>
-              <button
-                onClick={() => {
-                  axios
-                    .delete(
-                      "/api/v1/post",
-                      {
-                        id: -47,
-                      },
-                      {
-                        headers: {
-                          AccessToken: cookie,
-                        },
-                      }
-                    )
-                    .then((result) => {
-                      console.log(result.data);
-                    })
-                    .catch(() => {
-                      console.log("실패!!");
-                    });
-                }}
-              >
-                삭제
-              </button>
             </article>
           );
         })}

@@ -29,7 +29,7 @@ function Postdetail(props) {
 
   useEffect(() => {
     axios
-      .get("/api/v1/post/" + categorys[id].title1 + "/"+ post_id, {
+      .get("/api/v1/post/" + categorys[id].title1 + "/" + post_id, {
         headers: {
           accessToken: cookie,
         },
@@ -65,7 +65,7 @@ function Postdetail(props) {
                 <li>쪽지</li>
                 <li>신고</li>
               </ul>
-              <hr/>
+              <hr />
               <h2 className="post-title">{post.title}</h2>
               <p className="post-desc">{post.content}</p>
               <ul className="status-left">
@@ -73,31 +73,39 @@ function Postdetail(props) {
                   0
                 </li>
                 <li title="댓글" className="comment">
-                  5
+                  0
                 </li>
-                <li className="scrap">0</li>
+                <li id="scrap">0</li>
               </ul>
-              <hr/>
+              <hr />
               <div className="btns">
                 <li className="pos-vote">공감</li>
                 <li className="btn-scrap">스크랩</li>
               </div>
-              <div className="clearBothOnly"></div>
-              <form>
-                <input type="text" placeholder="댓글을 입력하세요" />
-              </form>
+              
+            </Link>
+          </article>
+          <div className="comments">
+            <form className="writecomment">
+              <input type="text" placeholder="댓글을 입력하세요" />
               <ul className="option" id="side">
-                <li>익명</li>
+                <li className="anom"></li>
                 <li
                   title="완료"
                   className="submits"
                 ></li>
-                </ul>
-            </Link>
-          </article>
+              </ul>
+            </form>
+          </div>
+          <div className="clearBothOnly"></div>
         </div>
-        
-      <RightAside></RightAside>
+        <div className="pagelist">
+          <Link to={"/post/"+categorys[id].id} className="pagelist-btn">
+            글목록
+          </Link>
+        </div>
+
+        <RightAside></RightAside>
       </div>
       <Bottom></Bottom>
     </div>

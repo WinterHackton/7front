@@ -14,7 +14,10 @@ const Home = (props) => {
   const [is_login, setIsLogin] = React.useState(false);
   const cookie = cookies.login;
   let [categorys] = useState(Category);
-  let count = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  let [article, setArticle] = useState([]);
+
+  let count = [0, 1, 2, 3, 4, 5];
   let count1 = [0, 1, 2, 3];
 
   useEffect(() => {
@@ -124,7 +127,7 @@ const Home = (props) => {
                           <span>
                             <Link to="/">
                               <time>3분 전</time>
-                              <p>안녕하세요 방학입니다.</p>
+                              <p>{article[i]}</p>
                             </Link>
                           </span>
                         );

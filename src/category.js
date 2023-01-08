@@ -14,7 +14,7 @@ let category = [
   {
     id: 2,
     title: "졸업게시판",
-    title1: "졸업게시판",
+    title1: "졸업생게시판",
   },
   {
     id: 3,
