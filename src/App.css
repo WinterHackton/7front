@@ -260,7 +260,7 @@ aside > div.menu > ol > li > a {
   padding-left: 0rem;
 }
 #container > div.wrap1 {
-  float: right;
+  float: left;
 }
 #container div.tablehead {
   position: fixed;

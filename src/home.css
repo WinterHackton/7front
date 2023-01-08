@@ -122,10 +122,6 @@
   width: 295px;
 }
 
-.desc_main:nth-child(2n) {
-  float: right;
-}
-
 .desc_card {
   margin: 0 5px 5px 0;
   width: 295px;
