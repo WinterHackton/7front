@@ -33,7 +33,7 @@ function App() {
       <Route path="/post" element={<Post />} />
       <Route path="/timetable" element={<Timetable />} />
       <Route path="/post/:id" element={<Post />} />
-      <Route path="/post/detail" element={<Postdetail />} />
+      <Route path="/post/:id/detail" element={<Postdetail />} />
       <Route path="/mypage" element={<Mypage />} />
       <Route path="/mypage/email" element={<Email />} />
 

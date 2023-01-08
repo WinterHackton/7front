@@ -7,9 +7,9 @@ import "./Mypage.css";
 
 const Email = () => {
   const [cookies, setCookie] = useCookies(["login"]);
+  let [code, codeChange] = useState('');
   const navigate = useNavigate();
   let [email, emailChange] = useState("");
-  let [code, codeChange] = useState("");
   const cookie = cookies.login;
 
   return (

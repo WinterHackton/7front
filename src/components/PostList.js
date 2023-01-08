@@ -33,7 +33,6 @@ function PostList(props) {
       .then((result) => {
         let copy = result.data;
         setArticle(copy);
-        console(result.data);
       })
       .catch(() => {});
   });
@@ -41,7 +40,7 @@ function PostList(props) {
     <div>
       <div className="post_list_title">
         <h1>
-          <a href="#">{categorys[id].title}</a>
+          <Link to="#">{categorys[id].title}</Link>
         </h1>
       </div>
       {write == true ? (
@@ -60,7 +59,11 @@ function PostList(props) {
         {article.map(function (a, i) {
           return (
             <article>
-              <Link to="#" className="article">
+              <Link to={"/post/"+categorys[id].id+"/detail"} className="article" onClick={() => {
+                localStorage.setItem('post_id', article[i].id);
+                console.log(article[i].id)
+                }
+              }>
                 <h2 className="medium">{article[i].title}</h2>
                 <p className="small">{article[i].content}</p>
                 <time className="small">10분전</time>
