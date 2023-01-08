@@ -14,9 +14,9 @@ function Postdetail(props) {
   const [is_login, setIsLogin] = React.useState(false);
   let [categorys] = useState(Category);
   let { id } = useParams();
+  let [post, postDetail] = useState([]);
   const cookie = cookies.login;
-
-
+  const post_id = localStorage.getItem('post_id');
 
   useEffect(() => {
     const cookie = cookies.login;
@@ -25,6 +25,22 @@ function Postdetail(props) {
     } else {
       setIsLogin(false);
     }
+  });
+
+  useEffect(() => {
+    axios
+      .get("/api/v1/post/" + categorys[id].title1 + "/"+ post_id, {
+        headers: {
+          accessToken: cookie,
+        },
+      })
+      .then((res) => {
+        console.log(res.data);
+        postDetail(res.data);
+      })
+      .catch(() => {
+        console.log("실패");
+      });
   });
 
   return (
@@ -50,8 +66,8 @@ function Postdetail(props) {
                 <li>신고</li>
               </ul>
               <hr/>
-              <h2 className="post-title">제목1</h2>
-              <p className="post-desc">내용입니다</p>
+              <h2 className="post-title">{post.title}</h2>
+              <p className="post-desc">{post.content}</p>
               <ul className="status-left">
                 <li title="공감" className="vote">
                   0
@@ -74,12 +90,13 @@ function Postdetail(props) {
                 <li>익명</li>
                 <li
                   title="완료"
-                  className="submit"
+                  className="submits"
                 ></li>
                 </ul>
             </Link>
           </article>
         </div>
+        
       <RightAside></RightAside>
       </div>
       <Bottom></Bottom>

@@ -25,7 +25,7 @@
   text-overflow: ellipsis;
 }
 
-.submit {
+.submits {
   background-image: url(../../public/submit.png);
   background-color: #c62917;
   display: inline-block;
@@ -82,7 +82,7 @@ ul.statusl-left {
   padding: 0;
 }
 
-.vote {
+/* .vote {
   margin-left: 0;
   margin-right: 8px;
   cursor: auto;
@@ -96,7 +96,7 @@ ul.statusl-left {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 11px 11px;
-}
+} */
 
 .btns {
   display: flex;
