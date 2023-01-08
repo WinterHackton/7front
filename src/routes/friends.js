@@ -20,10 +20,7 @@ function Friends() {
               autocomplete="off"
             />
             <div class="friendlist">
-              <a href="/@HApLzIW5BrTXuHkKeYsg" class="friend">
-                <h3>고진우</h3>
-              </a>
-              <a href="/@BIhvIy7o11CnkyiLRBTC" class="friend">
+              <a href="/friends/1" class="friend">
                 <h3>김도연</h3>
               </a>
               <a href="/@F8CG9RpMsykiR5lbTReO" class="friend">

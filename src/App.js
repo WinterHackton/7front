@@ -61,10 +61,7 @@ function Top(props) {
       <div className="top">
         <Nav bg="white" variant="white" className="top-navbar">
           <Link to="/home" className="nav-logo">
-            <img
-              src="/nav.logo.png"
-              width="60%"
-            ></img>
+            <img src="/nav.logo.png" width="60%"></img>
           </Link>
           <span className="main_msg">
             <div className="everytime">에브리타임</div>
@@ -73,7 +70,7 @@ function Top(props) {
 
           <ul id="nav-menu">
             <li>
-              <Link to="/">게시판</Link>
+              <Link to="/home">게시판</Link>
             </li>
             <li>
               <Link to="/">시간표</Link>

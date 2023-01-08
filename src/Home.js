@@ -14,7 +14,7 @@ const Home = (props) => {
   const [is_login, setIsLogin] = React.useState(false);
   const cookie = cookies.login;
   let [categorys] = useState(Category);
-  let [main1, setMain1] = useState();
+  let [main1, setMain1] = useState([]);
   let [main2, setMain2] = useState([]);
   let [main3, setMain3] = useState([]);
   let [main4, setMain4] = useState([]);
@@ -34,9 +34,7 @@ const Home = (props) => {
   let count1 = [0, 1, 2, 3];
   useEffect(() => {
     axios.get("api/v1/post/main").then((result) => {
-      let copy1 = result.data.freedomPostDtos;
-      setMain1(copy1);
-
+      setMain1(result.data.freedomPostDtos);
       let copy2 = result.data.secretPostDtos;
       setMain2(copy2);
       let copy3 = result.data.graduatePostDtos;
@@ -150,12 +148,107 @@ const Home = (props) => {
                   <h3>
                     <Link to="/">{categorys[0].title}</Link>
                   </h3>
-                  {count1.map(function (i) {
+                  {main1.map(function (a, i) {
                     return (
                       <span>
                         <Link to="/">
                           <time>3분 전</time>
-                          <p>{main1[0].title}</p>
+                          <p>{main1[i].title}</p>
+                        </Link>
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="desc_main">
+              <div className="desc_card">
+                <div className="desc_board">
+                  <h3>
+                    <Link to="/">{categorys[1].title}</Link>
+                  </h3>
+                  {main2.map(function (a, i) {
+                    return (
+                      <span>
+                        <Link to="/">
+                          <time>3분 전</time>
+                          <p>{main2[i].content}</p>
+                        </Link>
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="desc_main">
+              <div className="desc_card">
+                <div className="desc_board">
+                  <h3>
+                    <Link to="/">{categorys[2].title}</Link>
+                  </h3>
+                  {main3.map(function (a, i) {
+                    return (
+                      <span>
+                        <Link to="/">
+                          <time>3분 전</time>
+                          <p>{main3[i].content}</p>
+                        </Link>
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="desc_main">
+              <div className="desc_card">
+                <div className="desc_board">
+                  <h3>
+                    <Link to="/">{categorys[3].title}</Link>
+                  </h3>
+                  {main4.map(function (a, i) {
+                    return (
+                      <span>
+                        <Link to="/">
+                          <time>3분 전</time>
+                          <p>{main4[i].content}</p>
+                        </Link>
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="desc_main">
+              <div className="desc_card">
+                <div className="desc_board">
+                  <h3>
+                    <Link to="/">{categorys[4].title}</Link>
+                  </h3>
+                  {main5.map(function (a, i) {
+                    return (
+                      <span>
+                        <Link to="/">
+                          <time>3분 전</time>
+                          <p>{main5[i].content}</p>
+                        </Link>
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="desc_main">
+              <div className="desc_card">
+                <div className="desc_board">
+                  <h3>
+                    <Link to="/">{categorys[5].title}</Link>
+                  </h3>
+                  {main6.map(function (a, i) {
+                    return (
+                      <span>
+                        <Link to="/">
+                          <time>3분 전</time>
+                          <p>{main6[i].content}</p>
                         </Link>
                       </span>
                     );
@@ -235,150 +328,18 @@ const Home = (props) => {
             <div className="desc_card">
               <div className="desc_board">
                 <h3>
-                  <Link to="/Login">비밀게시판</Link>
+                  <Link to="/">{categorys[0].title}</Link>
                 </h3>
-                <div className="needauth">
-                  <p>
-                    로그인을 한 학생들만
-                    <br />
-                    이용할 수 있어요!
-                  </p>
-                  <Link to="/login" class="needauth_btn">
-                    로그인
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="desc_main">
-            <div className="desc_card">
-              <div className="desc_board">
-                <h3>
-                  <Link to="/Login">자유게시판</Link>
-                </h3>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="desc_main">
-            <div className="desc_card">
-              <div className="desc_board">
-                <h3>
-                  <Link to="/Login">자유게시판</Link>
-                </h3>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="desc_main">
-            <div className="desc_card">
-              <div className="desc_board">
-                <h3>
-                  <Link to="/Login">자유게시판</Link>
-                </h3>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="desc_main">
-            <div className="desc_card">
-              <div className="desc_board">
-                <h3>
-                  <Link to="/Login">자유게시판</Link>
-                </h3>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
+                {main1.map(function (a, i) {
+                  return (
+                    <span>
+                      <Link to="/">
+                        <time>3분 전</time>
+                        <p>{main1[i].title}</p>
+                      </Link>
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -405,7 +366,7 @@ const Home = (props) => {
             <div className="desc_card">
               <div className="desc_board">
                 <h3>
-                  <Link to="/Login">비밀게시판</Link>
+                  <Link to="/Login">졸업생게시판</Link>
                 </h3>
                 <div className="needauth">
                   <p>
@@ -424,32 +385,18 @@ const Home = (props) => {
             <div className="desc_card">
               <div className="desc_board">
                 <h3>
-                  <Link to="/Login">자유게시판</Link>
+                  <Link to="/">{categorys[2].title}</Link>
                 </h3>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
+                {main3.map(function (a, i) {
+                  return (
+                    <span>
+                      <Link to="/">
+                        <time>3분 전</time>
+                        <p>{main3[i].content}</p>
+                      </Link>
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -457,65 +404,38 @@ const Home = (props) => {
             <div className="desc_card">
               <div className="desc_board">
                 <h3>
-                  <Link to="/Login">자유게시판</Link>
+                  <Link to="/">{categorys[3].title}</Link>
                 </h3>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
+                {main4.map(function (a, i) {
+                  return (
+                    <span>
+                      <Link to="/">
+                        <time>3분 전</time>
+                        <p>{main4[i].content}</p>
+                      </Link>
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </div>
+
           <div className="desc_main">
             <div className="desc_card">
               <div className="desc_board">
                 <h3>
-                  <Link to="/Login">자유게시판</Link>
+                  <Link to="/">{categorys[3].title}</Link>
                 </h3>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
-                <span>
-                  <Link to="/">
-                    <time>3분 전</time>
-                    <p>안녕하세요 방학입니다.</p>
-                  </Link>
-                </span>
+                {main5.map(function (a, i) {
+                  return (
+                    <span>
+                      <Link to="/">
+                        <time>3분 전</time>
+                        <p>{main5[i].content}</p>
+                      </Link>
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </div>
