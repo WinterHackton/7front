@@ -1,35 +1,43 @@
-import React, { useState } from 'react';
-import { json, Link, useNavigate } from 'react-router-dom';
-import { useCookies } from "react-cookie"
-import axios from 'axios';
+import React, { useState } from "react";
+import { json, Link, useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
+import axios from "axios";
 import { Bottom } from "../App.js";
-import './Login.css'
-
+import "./Login.css";
 
 const Login = (props) => {
-  const [cookies,setCookie] = useCookies(["login"]);
+  const [cookies, setCookie] = useCookies(["login"]);
   const navigate = useNavigate();
-  let [id, idChange] = useState('');
-  let [pw, pwChange] = useState('');
-
+  let [id, idChange] = useState("");
+  let [pw, pwChange] = useState("");
+  let [token, setToken] = useState([]);
 
   return (
-
     <div className="login_form">
       <h1 className="logo">
         <img src={process.env.PUBLIC_URL + "index.login.logo.png"} />
       </h1>
       <form>
         <p className="input">
-          <input placeholder="아이디" name="id" autoComplete='id' onChange={(e) => {
-            idChange(e.target.value)
-          }}></input>
+          <input
+            placeholder="아이디"
+            name="id"
+            autoComplete="id"
+            onChange={(e) => {
+              idChange(e.target.value);
+            }}
+          ></input>
         </p>
         <p className="input">
-          <input placeholder="비밀번호" type="password" autoComplete="new-password"
-            name="password" onChange={(e) => {
-              pwChange(e.target.value)
-            }}></input>
+          <input
+            placeholder="비밀번호"
+            type="password"
+            autoComplete="new-password"
+            name="password"
+            onChange={(e) => {
+              pwChange(e.target.value);
+            }}
+          ></input>
         </p>
       </form>
       <p className="submit">
@@ -65,8 +73,6 @@ const Login = (props) => {
             password: pw,
           })
             .then((res) => {
-              console.log(res.data)
-              console.log(res.data.accessToken)
               setCookie("login", res.data.accessToken, { path: '/' });
               navigate('/home')
             })
@@ -81,7 +87,9 @@ const Login = (props) => {
       </label>
 
       <footer>
-        <p className="find"><Link to="/forgot">아이디/비밀번호 찾기</Link></p>
+        <p className="find">
+          <Link to="/forgot">아이디/비밀번호 찾기</Link>
+        </p>
         <p className="register">
           <span>에브리타임에 처음이신가요?</span>
           <Link to="/account">회원가입</Link>

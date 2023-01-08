@@ -13,7 +13,8 @@
   border: 2px solid #dbdbdb;
   color: #292929;
   font-size: 14px;
-  background: url(../../public/aside.search.background.png) no-repeat right center;
+  background: url(../../public/aside.search.background.png) no-repeat right
+    center;
   background-size: 40px 40px;
 }
 
@@ -40,7 +41,7 @@
   font-weight: bold;
 }
 
-.right_card > .right_board  a > p {
+.right_card > .right_board a > p {
   margin-bottom: 5px;
   height: 36px;
   line-height: 18px;
@@ -98,6 +99,46 @@
 }
 
 .right_article {
+  display: block;
   padding: 10px;
-  border-bottom: 1px solid #d6d6d6;
+  border-top: 1px solid #e3e3e3;
+}
+
+.right_board > h3 > a > span {
+  float: right;
+  line-height: 20px;
+  color: #a6a6a6;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* 로그인 안되있을 때 */
+.right_article_list {
+  display: block;
+  padding: 10px;
+  border-top: 1px solid #e3e3e3;
+  color: #666;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.right_article_list > time {
+  float: right;
+  margin-left: 10px;
+  height: 17px;
+  line-height: 18px;
+  color: #a6a6a6;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+#right_article_list_desc {
+  height: 17px;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #444444;
+  font-size: 13px;
+  margin: 0;
 }

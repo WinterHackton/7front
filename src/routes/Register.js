@@ -20,7 +20,7 @@ const Register = () => {
 
     <div className="login_form">
       <h1 className="logo">
-        <img src={process.env.PUBLIC_URL + "index.login.logo.png"} />
+        <img src="/index.login.logo.png" />
       </h1>
       <form>
         <p className="input">
@@ -99,8 +99,14 @@ const Register = () => {
             school: school,
             admissionId: ad
           })
-            .then(() => {
-              navigate('/login')
+            .then((res) => {
+              const statusCode = res.status;
+              if (statusCode === 409) {
+                alert("중복된 아이디 입니다.")
+              } else if (statusCode === 200) {
+                alert("회원가입에 성공하였습니다.")
+                navigate('/login')
+              }
             })
             .catch((err) => {
             console.log(err)

@@ -104,10 +104,11 @@
 .left_banner .banner_img {
   width: 100%;
   height: auto;
-  
 }
 
 .center_desc {
+  position: relative;
+  right: 175px;
   width: 600px;
 }
 
@@ -132,6 +133,9 @@
   overflow: hidden;
   background-color: #fff;
   text-align: left;
+}
+.desc_card > .desc_board {
+  height: 193px;
 }
 .desc_card > .desc_board > h3 {
   padding: 10px;
@@ -198,6 +202,7 @@
   border: 1px solid #d6d6d6;
   background-color: #f9f9f9;
   overflow: hidden;
+  text-align: left;
 }
 
 .right_aside > .right_board {
@@ -216,7 +221,7 @@
   font-weight: bold;
 }
 
-.right_card > .right_board  a > p {
+.right_card > .right_board a > p {
   margin-bottom: 5px;
   height: 36px;
   line-height: 18px;
@@ -276,4 +281,74 @@
 .right_article {
   padding: 10px;
   border-bottom: 1px solid #d6d6d6;
+}
+
+/* 로그인 안됬을때 */
+.left_form {
+  padding-top: 30px;
+}
+.left_profile > .left_profile_desc {
+  margin-bottom: 15px;
+  padding: 0;
+  color: #292929;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.left_profile > .left_profile_desc > strong {
+  color: #c62917;
+  font-weight: bold;
+}
+
+.left_profile > .button_login {
+  border: 1px solid #d6d6d6;
+  color: #737373;
+  background-color: #fff;
+  display: block;
+  margin-bottom: 5px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.left_profile > .button_register {
+  color: #fff;
+  background-color: #c62917;
+  display: block;
+  margin-bottom: 5px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.needauth {
+  padding: 40px 0;
+  border-top: 1px solid #e3e3e3;
+  text-align: center;
+}
+
+.needauth > p {
+  margin-bottom: 10px;
+  line-height: 18px;
+  color: #a6a6a6;
+  font-size: 14px;
+}
+
+.needauth > .needauth_btn {
+  display: inline-block;
+  padding: 0 10px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  background-color: #c62917;
 }

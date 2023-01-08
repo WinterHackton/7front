@@ -551,3 +551,22 @@ div.submenu-wrap div.group ul li a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* 로그인 안했을 때 */
+
+#nav-account > .nav_login_btn {
+  width: auto;
+  padding: 0 12px;
+  color: #737373;
+  font-size: 14px;
+}
+
+#nav-account > .nav_register_btn {
+  width: auto;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  background-color: #c62917;
+  padding: 0 12px;
+  font-size: 14px;
+}

@@ -1,4 +1,5 @@
 import "./Account.css";
+import { json, Link, useNavigate } from 'react-router-dom';
 
 function Account() {
   return (
@@ -22,7 +23,11 @@ function Account() {
         <div className="account_input">
           <label for="school" className="school_label">학교</label>
           <input type="text" id="school" placeholder="학교 이름을 검색하세요." />
-          <button type="submit">다음</button>
+          <button type="submit">
+            <Link to="/account/register">
+              다음
+            </Link>
+          </button>
         </div>
       </form>
     </div>
