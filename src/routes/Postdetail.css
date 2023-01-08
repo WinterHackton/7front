@@ -1,0 +1,136 @@
+.profile-img {
+  float: left;
+  margin: 0 10px 15px 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.profile {
+  float: left;
+  margin-bottom: 15px;
+  height: 40px;
+  color: #666;
+}
+
+.profile > .profile-name {
+  height: 20px;
+  max-width: 200px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #292929;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.submit {
+  background-image: url(../../public/submit.png);
+  background-color: #c62917;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40px 40px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+ul > .submit {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40px 40px;
+  cursor: pointer;
+}
+
+.post-status {
+  color: #666;
+  float: right;
+  list-style: none;
+}
+
+hr {
+  clear: both;
+  height: 0;
+  border: 0;
+}
+
+.post-title {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #292929;
+}
+
+.post-desc {
+  padding-bottom: 15px;
+  line-height: 20px;
+  color: #444444;
+  font-size: 14px;
+}
+
+ul.statusl-left {
+  float: left;
+  margin: 0;
+  color: #666;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  padding: 0;
+}
+
+.vote {
+  margin-left: 0;
+  margin-right: 8px;
+  cursor: auto;
+  padding-left: 15px;
+  color: #c62917;
+  background-image: url(../../public/container.articles.vote.png);
+  float: left;
+  padding: 0 2px;
+  height: 20px;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 11px 11px;
+}
+
+.btns {
+  display: flex;
+  padding-top: 16px;
+}
+
+.pos-vote {
+      margin-right: 4px;
+    padding: 0 12px 0 27px;
+    line-height: 30px;
+    border-radius: 8px;
+    color: #737373;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-image: url(../../public/container.articles.buttons.posvote.png);
+    background-color: #f9f9f9;
+    background-repeat: no-repeat;
+    background-position: left 12px center;
+    background-size: 11px 11px;
+}
+
+.btn-scrap {
+      margin-right: 4px;
+    padding: 0 12px 0 27px;
+    line-height: 30px;
+    border-radius: 8px;
+    color: #737373;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-image: url(../../public/container.articles.buttons.scrap.png);
+    background-color: #f9f9f9;
+    background-repeat: no-repeat;
+    background-position: left 12px center;
+    background-size: 11px 11px;
+}

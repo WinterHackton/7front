@@ -14,6 +14,9 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import Register from "./routes/Register.js";
 import { useCookies } from "react-cookie";
+import Postdetail from "./routes/Postdetail";
+import Mypage from "./routes/Mypage";
+import Email from "./routes/Email";
 
 function App() {
   let [categorys] = useState(Category);
@@ -30,6 +33,9 @@ function App() {
       <Route path="/post" element={<Post />} />
       <Route path="/timetable" element={<Timetable />} />
       <Route path="/post/:id" element={<Post />} />
+      <Route path="/post/detail" element={<Postdetail />} />
+      <Route path="/mypage" element={<Mypage />} />
+      <Route path="/mypage/email" element={<Email />} />
 
       {/* <Route path="/account/agreement" element={<Agreement />} /> */}
     </Routes>
@@ -56,7 +62,7 @@ function Top(props) {
         <Nav bg="white" variant="white" className="top-navbar">
           <Link to="/" className="nav-logo">
             <img
-              src={process.env.PUBLIC_URL + "nav.logo.png"}
+              src="/nav.logo.png"
               width="60%"
             ></img>
           </Link>
@@ -91,7 +97,7 @@ function Top(props) {
           <div id="nav-account">
             <Link to="/" className="nav-message"></Link>
 
-            <Link to="/" className="nav-mypage"></Link>
+            <Link to="/mypage" className="nav-mypage"></Link>
           </div>
         </Nav>
       </div>
