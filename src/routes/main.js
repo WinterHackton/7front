@@ -19,6 +19,7 @@ function Main() {
     }, 1500);
     picture == 3 ? setPicture(1) : console.log(picture);
   });
+<<<<<<< HEAD
   useEffect(() => {
     const cookie = cookies.login;
     if (cookie) {
@@ -199,6 +200,10 @@ function Main() {
       </div>
     );
   } return (
+=======
+
+  return (
+>>>>>>> da0b72336a37a6b4965b5a22b43b852288d1f6a2
     <div classmame="main" id="main">
       <asdie id="asdie_main">
         <div className="login">

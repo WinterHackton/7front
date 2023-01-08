@@ -67,6 +67,7 @@ const Login = (props) => {
                 console.log(err);
               })
           }}>로그인</button> */}
+<<<<<<< HEAD
         <button className="loginBtn" onClick={() => {
           axios.post('/api/v1/member/login', {
             userId: id,
@@ -80,6 +81,29 @@ const Login = (props) => {
               console.log(err)
             })
         }}>로그인</button>
+=======
+        <button
+          className="loginBtn"
+          onClick={() => {
+            axios
+              .post("/api/v1/member/login", {
+                userId: id,
+                password: pw,
+              })
+              .then((res) => {
+                console.log(res.data);
+                console.log(res.data.accessToken);
+                setCookie("login", res.data.accessToken, { path: "/" });
+                navigate("/home");
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }}
+        >
+          로그인
+        </button>
+>>>>>>> da0b72336a37a6b4965b5a22b43b852288d1f6a2
       </p>
       <label className="autologin">
         <input type="checkbox" name="autologin" value="1"></input>

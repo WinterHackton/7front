@@ -28,10 +28,7 @@ function App() {
       <Route path="/friends" element={<Friends />} />
       <Route path="/friends/1" element={<Friends_detail />} />
       <Route path="/post" element={<Post />} />
-<<<<<<< HEAD
       <Route path="/timetable" element={<Timetable />} />
-=======
->>>>>>> da0b72336a37a6b4965b5a22b43b852288d1f6a2
       <Route path="/post/:id" element={<Post />} />
 
       {/* <Route path="/account/agreement" element={<Agreement />} /> */}
@@ -134,7 +131,6 @@ function Top(props) {
             <Link to="/">캠퍼스픽</Link>
           </li>
         </ul>
-<<<<<<< HEAD
         <div id="nav-account" className="not_login_nav_account">
           <Link to="/login" className="nav_login_btn">
             로그인
@@ -143,12 +139,6 @@ function Top(props) {
           <Link to="/account" className="nav_register_btn">
             회원가입
           </Link>
-=======
-        <div id="nav-account">
-          <Link to="/login">로그인</Link>
-
-          <Link to="/account">회원가입</Link>
->>>>>>> da0b72336a37a6b4965b5a22b43b852288d1f6a2
         </div>
       </Nav>
     </div>
