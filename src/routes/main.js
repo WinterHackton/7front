@@ -13,7 +13,7 @@ function Main() {
     }, 1500);
     picture == 3 ? setPicture(1) : console.log(picture);
   });
-  console.log(picture);
+
   return (
     <div classmame="main" id="main">
       <asdie id="asdie_main">

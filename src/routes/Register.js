@@ -42,6 +42,7 @@ const Register = () => {
           <p className="input">
             <input placeholder="닉네임" name="nickname" autoComplete='nickname' onChange={(e) => {
               nicknameChange(e.target.value)
+              console.log(nickname)
             }}></input>
           </p>
           <p className="input">
@@ -89,7 +90,7 @@ const Register = () => {
                 console.log(err);
               })
           }}>회원가입</button> */}
-        {<button className="loginBtn" onClick={() => {
+        <button className="loginBtn" onClick={() => {
           axios.post('/api/v1/member/signup', {
             userId: id,
             password: pw,
@@ -98,17 +99,13 @@ const Register = () => {
             school: school,
             admissionId: ad
           })
-            .then((res) => {
-              const statusCode = res.status
-              console.log(res.data)
-              setCookie('id', res.data.AccessToken)
-              // navigate('/')
-              console.log(res.AccessToken)
+            .then(() => {
+              navigate('/login')
             })
             .catch((err) => {
             console.log(err)
           })
-        }}>회원가입</button>}
+        }}>회원가입</button>
         </p>
       <Bottom></Bottom>
     </div>

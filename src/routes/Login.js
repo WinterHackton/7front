@@ -3,10 +3,9 @@ import { json, Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { Bottom } from "../App.js";
-import { setCookie } from "./Cookie";
 import "./Login.css";
 
-const Login = () => {
+const Login = (props) => {
   const [cookies, setCookie] = useCookies(["login"]);
   const navigate = useNavigate();
   let [id, idChange] = useState("");
@@ -78,7 +77,9 @@ const Login = () => {
               })
               .then((res) => {
                 console.log(res.data);
-                setCookie("id", res.data.accessToken);
+                console.log(res.data.accessToken);
+                setCookie("login", res.data.accessToken, { path: "/" });
+                navigate("/home");
               })
               .catch((err) => {
                 console.log(err);
@@ -87,7 +88,6 @@ const Login = () => {
         >
           로그인
         </button>
-        console.log(res.data.accessToken);
       </p>
       <label className="autologin">
         <input type="checkbox" name="autologin" value="1"></input>
@@ -103,7 +103,6 @@ const Login = () => {
           <Link to="/account">회원가입</Link>
         </p>
       </footer>
-      <Bottom></Bottom>
     </div>
   );
 };

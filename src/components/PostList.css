@@ -266,3 +266,21 @@ div.articles > form.write p {
 form.write ul.option {
   padding-left: 0rem;
 }
+#container > div.articles > div.pagination > form.search {
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 8px 25px 8px 5px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+
+  background-size: 16px 16px;
+}
+#container > div.articles > div.pagination > a.next {
+  float: right;
+  margin-left: 0;
+  margin-right: 5px;
+  padding: 0 25px 0 10px;
+
+  background-position: right 10px center;
+}
