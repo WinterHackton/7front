@@ -14,11 +14,41 @@ const Home = (props) => {
   const [is_login, setIsLogin] = React.useState(false);
   const cookie = cookies.login;
   let [categorys] = useState(Category);
-
+  let [main1, setMain1] = useState();
+  let [main2, setMain2] = useState([]);
+  let [main3, setMain3] = useState([]);
+  let [main4, setMain4] = useState([]);
+  let [main5, setMain5] = useState([]);
+  let [main6, setMain6] = useState([]);
   let [article, setArticle] = useState([]);
 
-  let count = [0, 1, 2, 3, 4, 5];
+  let count = [
+    "freedomPostDtos",
+    "secretPostDtos",
+    "graduatePostDtos",
+    "freshmanPostDtos",
+    "issuePostDtos",
+    "marketplacePostDtos",
+    "secretPostDtos",
+  ];
   let count1 = [0, 1, 2, 3];
+  useEffect(() => {
+    axios.get("api/v1/post/main").then((result) => {
+      let copy1 = result.data.freedomPostDtos;
+      setMain1(copy1);
+
+      let copy2 = result.data.secretPostDtos;
+      setMain2(copy2);
+      let copy3 = result.data.graduatePostDtos;
+      setMain3(copy3);
+      let copy4 = result.data.issuePostDtos;
+      setMain4(copy4);
+      let copy5 = result.data.marketplacePostDtos;
+      setMain5(copy5);
+      let copy6 = result.data.secretPostDtos;
+      setMain6(copy6);
+    });
+  });
 
   useEffect(() => {
     const cookie = cookies.login;
@@ -114,29 +144,25 @@ const Home = (props) => {
               }
             ></img>
 
-            {count.map(function (a, i) {
-              return (
-                <div className="desc_main">
-                  <div className="desc_card">
-                    <div className="desc_board">
-                      <h3>
-                        <Link to="/">{categorys[i].title}</Link>
-                      </h3>
-                      {count1.map(function (i) {
-                        return (
-                          <span>
-                            <Link to="/">
-                              <time>3분 전</time>
-                              <p>{article[i]}</p>
-                            </Link>
-                          </span>
-                        );
-                      })}
-                    </div>
-                  </div>
+            <div className="desc_main">
+              <div className="desc_card">
+                <div className="desc_board">
+                  <h3>
+                    <Link to="/">{categorys[0].title}</Link>
+                  </h3>
+                  {count1.map(function (i) {
+                    return (
+                      <span>
+                        <Link to="/">
+                          <time>3분 전</time>
+                          <p>{main1[0].title}</p>
+                        </Link>
+                      </span>
+                    );
+                  })}
                 </div>
-              );
-            })}
+              </div>
+            </div>
           </article>
           <RightAside title="React 첫번 째 컴포넌트 공부" />;
         </div>

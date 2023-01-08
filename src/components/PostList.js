@@ -94,18 +94,6 @@ function PostList(props) {
                 >
                   삭제
                 </button>
-                {/* <button
-                  onClick={() => {
-                    let copy = [...글제목];
-                    copy.splice(i, 1);
-                    글제목변경(copy);
-                    let copy1 = [...글내용];
-                    copy1.splice(i, 1);
-                    글제목변경(copy1);
-                  }}
-                >
-                  삭제
-                </button> */}
               </Link>
             </article>
           );
