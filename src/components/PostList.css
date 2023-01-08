@@ -137,14 +137,9 @@
   background-image: url(../../public/container.articles.comment.png);
 }
 
-#container > div.wrap {
-  float: none;
-  position: relative;
-  left: 25px;
-  margin-top: 25px;
+.post_form {
   width: 780px;
-}
-.wa > .articles {
+  margin-top: 25px;
   background-color: white;
   border-bottom: 0;
 }
@@ -169,12 +164,14 @@ div.articles > form.write input.title {
   color: #292929;
   font-size: 16px;
   font-weight: bold;
+  cursor: text;
 }
 img,
 input,
 select,
 textarea {
   vertical-align: middle;
+  outline: none;
 }
 div.articles > form.write textarea {
   width: 100%;
