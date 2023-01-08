@@ -20,7 +20,7 @@ import Email from "./routes/Email";
 
 function App() {
   let [categorys] = useState(Category);
-  console.log(categorys[0].title);
+
   return (
     <Routes>
       <Route path="/" element={<Main />} exact={true} />
@@ -60,7 +60,7 @@ function Top(props) {
     return (
       <div className="top">
         <Nav bg="white" variant="white" className="top-navbar">
-          <Link to="/" className="nav-logo">
+          <Link to="/home" className="nav-logo">
             <img
               src="/nav.logo.png"
               width="60%"
@@ -181,7 +181,7 @@ function Bottom() {
 }
 function Wrap() {
   let [categorys] = useState(Category);
-  console.log(categorys[0].title);
+
   return (
     <div id="submenu">
       <div className="submenu-wrap">

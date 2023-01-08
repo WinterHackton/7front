@@ -33,6 +33,7 @@ function PostList(props) {
       .then((result) => {
         let copy = result.data;
         setArticle(copy);
+        console(result.data);
       })
       .catch(() => {
         console.log("실패");
@@ -42,7 +43,7 @@ function PostList(props) {
     <div>
       <div className="post_list_title">
         <h1>
-          <a href="/post">{categorys[id].title}</a>
+          <a href="#">{categorys[id].title}</a>
         </h1>
       </div>
       {write == true ? (
