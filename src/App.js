@@ -81,6 +81,7 @@ function Top(props) {
             <li>
               <Link to="/">학점계산기</Link>
             </li>
+
             <li>
               <Link to="/friends">친구</Link>
             </li>
