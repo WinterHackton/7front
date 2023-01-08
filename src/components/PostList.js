@@ -25,7 +25,7 @@ function PostList(props) {
 
   useEffect(() => {
     axios
-      .get("/api/v1/post/" + categorys[id].title + "?page=0", {
+      .get("/api/v1/post/" + categorys[id].title1 + "?page=0", {
         headers: {
           accessToken: cookie,
         },
@@ -92,43 +92,6 @@ function PostList(props) {
         })}
       </div>
 
-      <input
-        onChange={(e) => {
-          글제목작성(e.target.value);
-        }}
-      />
-      <input
-        onChange={(e) => {
-          글내용작성(e.target.value);
-        }}
-      />
-
-      <button
-        onClick={() => {
-          axios
-            .post(
-              "/api/v1/post",
-              {
-                title: 글제,
-                content: 글내,
-                category: categorys[id].title,
-                anonymous: true,
-              },
-              {
-                headers: {
-                  accessToken: cookie,
-                },
-              }
-            )
-            .then((result) => {
-              console.log(result.data.title);
-            })
-            .catch(() => { });
-        }}
-      >
-        글발행
-      </button>
-
       <a href="/post/ ${id} /p/2" className="next">
         다음
       </a>
@@ -137,8 +100,11 @@ function PostList(props) {
   );
 }
 function WriteArticle(props) {
+  let [categorys] = useState(Category);
+  let { id } = useParams();
   const [cookies] = useCookies(["login"]);
   const cookie = cookies.login;
+
   return (
     <div className="wrap articles post_form">
       <form className="write">
@@ -212,7 +178,7 @@ function WriteArticle(props) {
                   {
                     title: props.글제,
                     content: props.글내,
-                    category: props.categorys[props.id].title,
+                    category: categorys[id].title1,
                     anonymous: true,
                   },
                   {
@@ -227,6 +193,8 @@ function WriteArticle(props) {
                 .catch(() => {
                   console.log("실패");
                 });
+              props.setWrite(false);
+              props.setNew(true);
             }}
             title="완료"
             className="submit"
