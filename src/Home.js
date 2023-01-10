@@ -14,7 +14,7 @@ const Home = (props) => {
   const [is_login, setIsLogin] = React.useState(false);
   const cookie = cookies.login;
   let [categorys] = useState(Category);
-  let [main1, setMain1] = useState();
+  let [main1, setMain1] = useState([]);
   let [main2, setMain2] = useState([]);
   let [main3, setMain3] = useState([]);
   let [main4, setMain4] = useState([]);
@@ -34,9 +34,7 @@ const Home = (props) => {
   let count1 = [0, 1, 2, 3];
   useEffect(() => {
     axios.get("api/v1/post/main").then((result) => {
-      let copy1 = result.data.freedomPostDtos;
-      setMain1(copy1);
-
+      setMain1(result.data.freedomPostDtos);
       let copy2 = result.data.secretPostDtos;
       setMain2(copy2);
       let copy3 = result.data.graduatePostDtos;
@@ -150,12 +148,12 @@ const Home = (props) => {
                   <h3>
                     <Link to="/">{categorys[0].title}</Link>
                   </h3>
-                  {count1.map(function (i) {
+                  {main1.map(function (a, i) {
                     return (
                       <span>
                         <Link to="/">
                           <time>3분 전</time>
-                          <p>{main1[0].title}</p>
+                          <p>{main1[i].title}</p>
                         </Link>
                       </span>
                     );

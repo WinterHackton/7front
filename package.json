@@ -1,5 +1,5 @@
 {
-  "proxy": "http://every-time-clone.shop/",
+  "proxy": "http://every-time-clone.shop:8080/",
   "name": "everytime",
   "version": "0.1.0",
   "private": true,

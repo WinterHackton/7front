@@ -41,7 +41,7 @@ function Main() {
           <aside className="left_aside">
             <div className="left_profile">
               <img
-                src={process.env.PUBLIC_URL + "0.png"}
+                src="/0.png"
                 className="default_img"
               ></img>
               <p className="nickname">동산벌</p>
@@ -73,7 +73,7 @@ function Main() {
               <div className="banner">
                 <Link to="/">
                   <img
-                    src={process.env.PUBLIC_URL + "homecard_230101.png"}
+                    src="/homecard_230101.png"
                     className="banner_img"
                   ></img>
                 </Link>
@@ -83,10 +83,8 @@ function Main() {
               <div className="banner">
                 <Link to="/">
                   <img
-                    src={
-                      process.env.PUBLIC_URL +
-                      "20230102_mars_internship_card.png"
-                    }
+                    src=
+                    "/20230102_mars_internship_card.png"
                     className="banner_img"
                   ></img>
                 </Link>
@@ -96,10 +94,10 @@ function Main() {
               <div className="banner">
                 <Link to="/">
                   <img
-                    src={
-                      process.env.PUBLIC_URL +
-                      "20230102_univstore_locomotive_card.jpg"
-                    }
+                    src=
+
+                    "/20230102_univstore_locomotive_card.jpg"
+
                     className="banner_img"
                   ></img>
                 </Link>
@@ -108,9 +106,8 @@ function Main() {
           </aside>
           <article className="center_desc">
             <img
-              src={
-                process.env.PUBLIC_URL + "20230103_tripstore_main_A_home.png"
-              }
+              src=
+                "/20230103_tripstore_main_A_home.png"
             ></img>
             <div className="desc_main">
               <div className="desc_card">
@@ -388,7 +385,7 @@ function Main() {
       <asdie id="asdie_main">
         <div className="login">
           <a href="/" className="logo">
-            <img src={process.env.PUBLIC_URL + "main_logo.png"} />
+            <img src="/main_logo.png" />
           </a>
           <a href="/login" className="button login">
             로그인
@@ -458,13 +455,13 @@ function Main() {
           <div className="stores">
             <a href="/page/mlink?lid=web_about&amp;store=playstore">
               <img
-                src={process.env.PUBLIC_URL + "google.png"}
+                src= "/google.png"
                 alt="에브리타임 - Play Store - Google"
               />
             </a>
             <a href="/page/mlink?lid=web_about&amp;store=appstore">
               <img
-                src={process.env.PUBLIC_URL + "apple.png"}
+                src= "/apple.png"
                 alt="에브리타임 - AppStore - Apple"
               />
             </a>

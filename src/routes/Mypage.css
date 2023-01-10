@@ -1,3 +1,100 @@
 .my {
-  margin-top: 150px;
+  padding-top: 80px;
+}
+
+.my-desc {
+  width: 480px;
+  margin: 0 auto;
+  padding: 12px 0;
+  box-sizing: border-box;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+  margin: 8px auto 0 auto;
+}
+
+.my-desc:first-child {
+  margin-top: 24px;
+}
+
+.my-title {
+  text-align: left;
+  padding: 12px 24px;
+  display: flex;
+}
+
+.my-title > h1 {
+  flex: auto;
+  line-height: 30px;
+  color: #292929;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.my-title > .my-logout {
+  padding: 0 12px;
+  border-radius: 15px;
+  line-height: 30px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #c62917;
+}
+
+.my-profile {
+  text-align: left;
+  margin: 0 24px 12px 24px;
+  position: relative;
+  padding-left: 72px;
+}
+
+.my-profile > img {
+  position: absolute;
+  left: 0;
+  border-radius: 18px;
+  width: 56px;
+  height: 56px;
+}
+
+.my-profile > h3 {
+  line-height: 20px;
+  color: #292929;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.my-profile > p {
+  line-height: 18px;
+  color: #a6a6a6;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.my-desc {
+  text-align: left;
+  padding: 12px 0;
+  box-sizing: border-box;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+}
+
+.my-desc > h2 {
+  padding: 12px 16px;
+  line-height: 26px;
+  color: #292929;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.my-desc > .my-item {
+  padding: 12px 16px;
+  display: block;
+  line-height: 24px;
+  word-wrap: break-word;
+  color: #292929;
+  font-size: 16px;
 }

@@ -35,7 +35,6 @@ function Postdetail(props) {
         },
       })
       .then((res) => {
-        console.log(res.data);
         postDetail(res.data);
       })
       .catch(() => {
