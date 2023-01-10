@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "proxy": "http://every-time-clone.shop:8080/",
+=======
+  "proxy": "http://every-time-clone.shop:8080",
+>>>>>>> 02f60bbee0275e13dd1153bfd1f4cca783c3e60c
   "name": "everytime",
   "version": "0.1.0",
   "private": true,

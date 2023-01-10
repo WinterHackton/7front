@@ -6,7 +6,7 @@ import { useCookies } from "react-cookie";
 import Category from "../category";
 import RightAside from "../components/Aside";
 import { Top, Bottom, Wrap } from "../App";
-import "./Postdetail.css"
+import "./Postdetail.css";
 
 function Postdetail(props) {
   let [article, setArticle] = useState([]);
@@ -16,8 +16,9 @@ function Postdetail(props) {
   let { id } = useParams();
   let [post, postDetail] = useState([]);
   const cookie = cookies.login;
-  const post_id = localStorage.getItem('post_id');
-
+  const post_id = localStorage.getItem("post_id");
+  let [댓글, 댓글작성] = useState("");
+  let [comment, setComment] = useState([]);
   useEffect(() => {
     const cookie = cookies.login;
     if (cookie) {
@@ -36,12 +37,16 @@ function Postdetail(props) {
       })
       .then((res) => {
         postDetail(res.data);
+
+        let copy = res.data.commentFindAllDtos;
+
+        setComment(copy);
       })
       .catch(() => {
         console.log("실패");
       });
   });
-
+  console.log(comment);
   return (
     <div>
       <Top></Top>
@@ -49,7 +54,7 @@ function Postdetail(props) {
       <div className="container">
         <div className="post_list_title">
           <h1>
-            <a href="/post">자유게시판</a>
+            <a href="/post">{categorys[id].title}</a>
           </h1>
         </div>
         <div className="post_articles">
@@ -81,15 +86,64 @@ function Postdetail(props) {
                 <li className="pos-vote">공감</li>
                 <li className="btn-scrap">스크랩</li>
               </div>
-              
             </Link>
           </article>
+
           <div className="comments">
+            {comment.map(function (a, i) {
+              return (
+                <article className="parnet">
+                  <h3 className="medium">익명{i + 1}</h3>
+                  <ul className="status">
+                    <li className="childcomment">대댓글</li>
+                    <li className="commentvote">공감</li>
+                    <li
+                      className="messagesend"
+                      data-modal="messageSend"
+                      data-comment-id="1303885551"
+                      data-is-anonym="1"
+                    >
+                      쪽지
+                    </li>
+                    <li class="abuse">신고</li>
+                  </ul>
+                  <hr></hr>
+                  <p className="large">{comment[i].content}</p>
+                </article>
+              );
+            })}
+
             <form className="writecomment">
-              <input type="text" placeholder="댓글을 입력하세요" />
+              <input
+                onChange={(e) => {
+                  댓글작성(e.target.value);
+                }}
+                type="text"
+                placeholder="댓글을 입력하세요"
+              />
               <ul className="option" id="side">
                 <li className="anom"></li>
                 <li
+                  onClick={() => {
+                    axios
+                      .post(
+                        "/api/v1/comment",
+                        {
+                          content: 댓글,
+                          postId: 1,
+                          anonymous: true,
+                        },
+                        {
+                          headers: {
+                            accessToken: cookie,
+                          },
+                        }
+                      )
+                      .then((result) => {})
+                      .catch(() => {
+                        console.log("실패");
+                      });
+                  }}
                   title="완료"
                   className="submits"
                 ></li>
@@ -99,7 +153,7 @@ function Postdetail(props) {
           <div className="clearBothOnly"></div>
         </div>
         <div className="pagelist">
-          <Link to={"/post/"+categorys[id].id} className="pagelist-btn">
+          <Link to={"/post/" + categorys[id].id} className="pagelist-btn">
             글목록
           </Link>
         </div>
@@ -108,6 +162,6 @@ function Postdetail(props) {
       </div>
       <Bottom></Bottom>
     </div>
-  )
-};
+  );
+}
 export default Postdetail;

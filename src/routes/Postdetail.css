@@ -208,3 +208,45 @@ ul.status-left {
   cursor: pointer;
   background-image: url(../../public/container.articles.pagination.list.png);
 }
+div.comments article.parent {
+  padding: 15px 15px 0 15px;
+  border-top: 1px solid #e3e3e3;
+}
+div.comments article {
+  margin: 0;
+  border: 0;
+  background-color: #fff;
+}
+article h3.medium {
+  float: left;
+  max-width: 90px;
+  margin: 0 10px 5px 0;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+article ul.status {
+  float: right;
+}
+article ul.status li {
+  float: left;
+  margin-left: 8px;
+  padding: 0 2px;
+  height: 20px;
+  line-height: 20px;
+  color: #a6a6a6;
+  font-size: 12px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 11px 11px;
+  cursor: pointer;
+}
+div.comments article p.large {
+  padding-bottom: 5px;
+}
+article hr {
+  clear: both;
+  height: 0;
+  border: 0;
+}
