@@ -16,63 +16,84 @@ const Email = () => {
     <div>
       <Top></Top>
       <div className="container my">
-        <button
-          onClick={() => {
-            axios
-              .post(
-                "/api/v1/member/email",
-                {
-                  email: "zkakcnd@naver.com",
-                },
-                {
-                  headers: {
-                    accessToken: cookie,
+        <section className="my-desc email-desc">
+          <div className="my-title">
+            <h1>이메일 인증</h1>
+          </div>
+          <div>
+
+            <input
+              type="text"
+              className="email-input"
+              placeholder="이메일"
+              onChange={(e) => {
+              emailChange(e.target.value);
+            }} />
+            <button
+              className="email-btn"
+              onClick={() => {
+                axios
+                  .post(
+                    "/api/v1/member/email",
+                    {
+                      email: email,
+                    },
+                    {
+                      headers: {
+                        accessToken: cookie,
+                      },
+                    }
+                  )
+                  .then((res) => {
+                    console.log(res.data);
+                    alert("인증번호가 전송되었습니다.")
+                  })
+                  .catch((err) => {
+                    console.log(err);
+                  });
+              }}
+            >
+              인증번호 요청
+            </button>
+          </div>
+          <form>
+            <input
+              className="email-input"
+              type="text"
+              placeholder="인증번호"
+              onChange={(e) => {
+                codeChange(e.target.value);
+              }}
+            ></input>
+          </form>
+          <button
+            className="email-btn"
+            onClick={() => {
+              axios
+                .post(
+                  "/api/v1/member/email/check",
+                  {
+                    code: code,
                   },
-                }
-              )
-              .then((res) => {
-                console.log(res.data);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          }}
-        >
-          인증번호 요청
-        </button>
+                  {
+                    headers: {
+                      accessToken: cookie,
+                    },
+                  }
+                )
+                .then((res) => {
+                  console.log(res.data);
+                  navigate("/home");
+                })
+                .catch((err) => {
+                  console.log(err);
+                });
+            }}
+          >
+            제출
+          </button>
+        </section>
       </div>
-      <form>
-        <input
-          type="text"
-          onChange={(e) => {
-            codeChange(e.target.value);
-          }}
-        ></input>
-      </form>
-      <button
-        onClick={() => {
-          axios
-            .post(
-              "/api/v1/member/email/check",
-              {
-                code: code,
-              },
-              {
-                headers: {
-                  accessToken: cookie,
-                },
-              }
-            )
-            .then((res) => {
-              console.log(res.data);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        }}
-      >
-        제출
-      </button>
     </div>
   );
 };
